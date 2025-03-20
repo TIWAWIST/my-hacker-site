@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعدة الهاكرز</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            text-shadow: 0 0 10px #00ff00;
+        }
+        #tips {
+            margin-top: 20px;
+            border: 1px solid #00ff00;
+            padding: 10px;
+        }
+        button {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00ff00;
+            color: black;
+        }
+        .bottom-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .bottom-right a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .bottom-left a {
+            text-decoration: none;
+            background-image: linear-gradient(to right, red, darkred);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+        .middle-left {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>TIWAWIST.COM</h1>
+    <p>شارك نصائحك التقنية وساعد الآخرين!</p>
+    <div id="tips">
+        <p><strong>نصيحة 1:</strong> استخدم المصادقة الثنائية لحماية حساباتك.</p>
+    </div>
+    <button onclick="addTip()">أضف نصيحة جديدة</button>
+    
+    <div class="bottom-right">
+        <a href="https://keykey.ninja/" target="_blank">لا تضغط هنا، إنه خطير</a>
+    </div>
+    
+    <div class="bottom-left">
+        <a href="https://www.instagram.com/salem__1_/" target="_blank" class="rainbow-text">اضغط هنا للتواصل</a>
+    </div>
+    
+    <div class="middle-left">موقع للتخلص من معلوماتك</div>
+    
+    <script>
+        function addTip() {
+            let newTip = prompt("اكتب نصيحتك هنا:");
+            if (newTip) {
+                let tipDiv = document.getElementById("tips");
+                let p = document.createElement("p");
+                p.innerHTML = `<strong>نصيحة جديدة:</strong> ${newTip}`;
+                tipDiv.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
